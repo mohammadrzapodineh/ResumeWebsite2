@@ -1,0 +1,27 @@
+{% extends 'shared/MainLayout.html' %}
+{% block title %}وبسایت شخصی محمد رضا پودینه{% endblock %}
+{% block content %}
+<!-- About -->
+<div class="pb-0 pb-sm-2">
+    <h1 class="title title--h1 title__separate">درباره من</h1>
+    {{ about.biography }}
+</div>
+
+<!-- What -->
+<h2 class="title title--h2 mt-3">چه کاری انجام می دهم</h2>
+<div class="row">
+    <!-- Case Item -->
+    {% for object in whatdo_list %}
+    <div class="col-12 col-lg-6">
+        <div class="case-item box box-inner">
+            <img class="case-item__icon" src="{{ object.image }}" alt="{{ object.title }}" />
+            <div>
+                <h3 class="title title--h3">{{ object.title }}</h3>
+                <p class="case-item__caption">{{ object.description }}</p>
+            </div>	
+        </div>
+    </div>
+    {% endfor %}
+        
+</div>	
+{% endblock %}

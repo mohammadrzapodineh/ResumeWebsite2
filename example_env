@@ -1,0 +1,5 @@
+EMAIL_HOST_USER = 'Your Gmail'
+EMAIL_HOST_PASSWORD = 'Your Password App Smtp From Gmail'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Your Email'

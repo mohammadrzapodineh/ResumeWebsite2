@@ -1,0 +1,40 @@
+{% extends 'shared/MainLayout.html' %}
+{% block title %}رزومه من{% endblock %}
+{% block content %}
+					    <!-- About -->
+						<div class="pb-3">
+		                    <h1 class="title title--h1 title__separate">رزومه</h1>
+					    </div>
+						
+						<!-- Experience -->
+						<h2 class="title title--h2"><span class="box icon-box"><i class="font-icon feathericon-book-open"></i></span>تحصیلات</h2>
+						<div class="timeline">
+							<!-- Item -->
+							{% for eduction in educations %}
+							{% include 'components/resume/resume_article_tag_component.html' with object=eduction %}
+							{% endfor %}
+							
+
+				
+						</div>
+
+						<h2 class="title title--h2"><span class="box icon-box"><i class="font-icon feathericon-briefcase"></i></span>تجربیات</h2>
+						<div class="timeline">
+							<!-- Item -->
+							{% for experince in experinces %}
+							{% include 'components/resume/resume_article_tag_component.html' with object=experince %}
+							{% endfor %}
+
+						</div>
+						
+						<!-- Skills -->
+						<h2 class="title title--h2 mt-3">مهارت های من</h2>
+						<div class="box box-inner mb-0">
+							<!-- Web Design -->
+							{% for skill in skills %}
+							{% include 'components/resume/resume_progress_bar_component.html' with skill=skill %}
+							{% endfor  %}
+				
+						</div>
+                        
+{% endblock %}

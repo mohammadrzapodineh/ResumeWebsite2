@@ -1,0 +1,22 @@
+{% extends 'shared/MainLayout.html' %}
+{% load static %}
+{% block title %}نمونه کارها{% endblock %}
+{% block content %}		
+<!-- About -->
+<div class="pb-3">
+    <h1 class="title title--h1 title__separate">نمونه کار ها</h1>
+</div>
+
+<!-- Filter -->
+<!-- Gallery -->
+<div class="gallery-grid js-masonry js-filter-container" id="portfolio_data_section">
+    
+     <!-- Items -->
+     <div class="gutter-sizer"></div>
+    {% include "components/portfolio/portfolio_list_component.html" with portfolios=portfolios %}
+        
+</div><!-- /Gallery -->{% endblock %}
+
+{% block footer_ref %}
+<script src="{% static 'assets/js/portfolio.js' %}"></script>
+{% endblock %}

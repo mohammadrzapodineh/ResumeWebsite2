@@ -1,0 +1,12 @@
+{% load jalali_tags %}
+<article class="news-item box">
+    <div class="news-item__image-wrap">
+        <a class="news-item__link" href="{% url 'blog:article_detail' article.slug %}"></a>
+        <img class="cover lazyload" src="{{ article.image.url }}" alt="" />
+    </div>
+    <div class="news-item__caption">
+        <div class="news-item__date"><span>طراحی</span>{{ article.publish_date|to_jalali:"%Y/%m/%d" }}</div>
+        <h2 class="title title--h2"><a href="single-post.html">{{ aricle.title}}</a></h2>
+        <p>{{ article.description|safe|truncatechars:100 }}</p>
+    </div>
+</article>

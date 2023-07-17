@@ -1,0 +1,11 @@
+<div class="gallery-grid__item category-design">
+    <a href="{{ portfolio.get_absolute_url  }}">
+        <div class="gallery-grid__image-wrap">
+            <img class="gallery-grid__image cover lazyload" src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" />
+        </div>
+        <div class="gallery-grid__caption">
+            <h3 class="title gallery-grid__title">{{ portfolio.title }} </h3>
+            <span class="gallery-grid__category">{% for category in portfolio.categories.all  %}{{ category.title }},{% endfor %}</span>
+        </div>
+    </a>
+</div>

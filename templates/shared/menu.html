@@ -1,0 +1,10 @@
+{% load home_tags %}
+<div class="nav-container">
+    <ul class="nav">
+        <li class="nav__item"><a class="{% active_tag request 'home:home_page' %}" href="{% url 'home:home_page' %}">درباره من</a></li>
+        <li class="nav__item"><a href="{% url 'resume:resume_page' %}" class="{% active_tag request 'resume:resume_page' %}">رزومه من</a></li>
+        <li class="nav__item"><a href="{% url 'portfolio:portfolio_list' %}" class="{% active_tag request 'portfolio:portfolio_list' 'portfolio:portfolio_detail'  %}">نمونه کار ها</a></li>
+        <li class="nav__item"><a href="{% url 'blog:article_list' %}" class="{% active_tag request 'blog:article_list' 'blog:article_detail'  %}">وبلاگ</a></li>
+        <li class="nav__item"><a href="{% url 'contact:contact_me' %}" class="{% active_tag request 'contact:contact_me'  %}">تماس با من</a></li>
+    </ul>
+</div>
